@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/chaosmail/ansible-roles-sublime-text.svg?branch=master)](https://travis-ci.org/chaosmail/ansible-roles-sublime-text)
+
 Sublime Text
 ============
 
@@ -19,19 +21,18 @@ Enable package control via the `sublime_package_control` property.
 
     sublime_package_control: true
 
-Configure sublime plugins that will be installed via `git` using the `sublime_packages` property. Use the format `[{pluginName: pluginGithiubLink}, ..]`.
+Configure sublime plugins that will be installed via `git` using the `sublime_packages` property. Use the format `[plugin1GithubUrl, plugin2GithubUrl, ..]` or `[{name: plugin1GithubUrl, version: plugin1Ref}, ..]`.
 
     sublime_packages:
-      'AdvancedNewFile': 'https://github.com/skuroda/Sublime-AdvancedNewFile.git'
-      'Ansible': 'https://github.com/clifford-github/sublime-ansible.git'
-      'ColorPicker': 'https://github.com/weslly/ColorPicker.git'
-      'Git': 'https://github.com/kemayo/sublime-text-git.git'
-      'GitGutter': 'https://github.com/jisaacks/GitGutter.git'
-      'Jinja2': 'https://github.com/mitsuhiko/jinja2-tmbundle'
-      'Mardown Preview': 'https://github.com/revolunet/sublimetext-markdown-preview'
-      'SublimeLinter': 'https://github.com/SublimeLinter/SublimeLinter3.git'
-      'Terminal': 'https://github.com/wbond/sublime_terminal.git'
-      'TypeScript': 'https://github.com/Microsoft/TypeScript-Sublime-Plugin.git'
+      - 'https://github.com/skuroda/Sublime-AdvancedNewFile.git'
+      - 'https://github.com/clifford-github/sublime-ansible.git'
+      - 'https://github.com/weslly/ColorPicker.git'
+      - 'https://github.com/kemayo/sublime-text-git.git'
+      - 'https://github.com/jisaacks/GitGutter.git'
+      - 'https://github.com/mitsuhiko/jinja2-tmbundle'
+      - 'https://github.com/revolunet/sublimetext-markdown-preview'
+      - 'https://github.com/SublimeLinter/SublimeLinter3.git'
+      - 'https://github.com/Microsoft/TypeScript-Sublime-Plugin.git'
 
 Dependencies
 ------------

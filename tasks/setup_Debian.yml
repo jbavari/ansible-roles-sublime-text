@@ -1,29 +1,34 @@
 ---
 # Install Sublime Text on Debian
 
-- name: "install HTTPS transport"
+- name: install HTTPS transport
   apt:
     name: "apt-transport-https"
     state: present
+  become: true
 
-- name: "install git"
+- name: install git
   apt:
     name: "git"
     state: present
+  become: true
   when: sublime_package_control
 
 - name: add public key
   apt_key:
     url: "{{ sublime_apt_key }}"
     state: present
+  become: true
 
 - name: add repository
   apt_repository:
     repo: "{{ sublime_apt_repo }}"
     state: present
     update_cache: yes
+  become: true
 
 - name: install package
   apt:
-    pkg: "sublime={{ sublime_version }}*"
+    pkg: "sublime-text={{ sublime_version }}*"
     state: present
+  become: true

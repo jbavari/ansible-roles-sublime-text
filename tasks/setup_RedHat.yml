@@ -1,0 +1,36 @@
+---
+# Install Sublime-Text on RedHat
+
+- name: import rpm key (CentOS < 7)
+  rpm_key:
+    key: "http://{{ sublime_rpm_key }}"
+    state: present
+  become: true
+  when: ansible_distribution_major_version|int < 7
+
+- name: import rpm key (CentOS 7+)
+  rpm_key:
+    key: "https://{{ sublime_rpm_key }}"
+    state: present
+  become: true
+  when: ansible_distribution_major_version|int >= 7
+
+- name: add repositories (CentOS < 7).
+  yum:
+    name: "http://{{ sublime_rpm_url }}"
+    state: present
+  become: true
+  when: ansible_distribution_major_version|int < 7
+
+- name: add repositories (CentOS 7+).
+  yum:
+    name: "https://{{ sublime_rpm_url }}"
+    state: present
+  become: true
+  when: ansible_distribution_major_version|int >= 7
+
+- name: install package
+  yum:
+    name: "sublime-text-{{ sublime_version }}*"
+    state: present
+  become: true
