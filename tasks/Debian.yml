@@ -4,6 +4,7 @@
 - name: install HTTPS transport
   apt:
     name: "apt-transport-https"
+    update_cache: true
     state: present
   become: true
 

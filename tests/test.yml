@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   roles:
-    - ansible-roles-sublime-text
+    - sublime-text
   vars:
     sublime_version: 3
     sublime_packages:
