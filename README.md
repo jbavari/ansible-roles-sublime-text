@@ -5,7 +5,7 @@ Sublime Text
 
 Ansible role to install sublime-text, package control and sublime-text plugins on CentOS or Ubuntu.
 
-This role is tested via Travis on following Platforms:
+This role is tested via TravisCI on following platforms:
 - Ubuntu 18.04 LTS (bionic)
 - Ubuntu 16.04 LTS (xenial)
 - Ubuntu 14.04 LTS (trusty)
