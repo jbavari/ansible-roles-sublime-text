@@ -17,7 +17,7 @@ Set the Sublime-Text version via the `sublime_version` property. Can be one of `
 
     sublime_version: 3
 
-Enable package control via the `sublime_package_control` property.
+Enable package control via the `sublime_package_control` property. This is enabled  by default.
 
     sublime_package_control: true
 
@@ -41,8 +41,6 @@ No dependencies.
 
 Example Playbook
 ----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
     - hosts: servers
       roles:
