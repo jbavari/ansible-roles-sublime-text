@@ -43,7 +43,7 @@
 
 - name: install all sublime plugins
   git:
-    repo: "{{ item.name | default(item) }}"
+    repo: "{{ item.url | default(item) }}"
     version: "{{ item.version | default('master') }}"
     dest: "{{ sublime_packages_dir }}/{{item.name | default(item)}}"
     accept_hostkey: "yes"
